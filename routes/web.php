@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/',['as' => 'home.blade.index', 'uses' =>
+    'HomeController@index']);
+
+Route::get('/about',['as' => 'about.blade.index', 'uses' =>
+    'AboutController@index']);
+
+Route::get('/news',['as' => 'news.blade.index', 'uses' =>
+    'NewsController@index']);
+
